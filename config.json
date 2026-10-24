@@ -1,0 +1,33 @@
+{
+  "client": "Scores OS",
+  "motif": "score-grass",
+  "logo": "logo.png",
+  "colors": {
+    "deep": "#0E2D1A",
+    "primary": "#1A6B3C",
+    "gold": "#D4AF37",
+    "goldLight": "#F4D96B",
+    "mint": "#E8F4ED",
+    "low": "#E5484D",
+    "mid": "#F5A524"
+  },
+  "font": "Inter",
+  "copy": {
+    "eyebrow": "The operating system for credit repair agencies",
+    "h1a": "Stop duct-taping",
+    "h1b": "ten subscriptions",
+    "h1c": "together.",
+    "sub": "Score OS replaces your CRM, dispute tool, client portal and marketing stack with one operating system built for credit repair, starting at $199/mo with unlimited clients.",
+    "ctaPrimary": "Get Started — $199/mo",
+    "ctaPrimaryHref": "https://checkout.square.site/merchant/MLGEBVXJC0JRS/checkout/6A2Q2LWRQHPQDXV3LPI3BSBZ",
+    "ctaSecondary": "Book a demo",
+    "ctaSecondaryHref": "https://scoresos.com/maxine",
+    "unlock": "Funding ready",
+    "unlockTag": "Funding OS · Coming soon",
+    "disclaimer": "Illustrative score. Results vary; no score increase is guaranteed."
+  },
+  "score": { "from": 520, "to": 784, "unlockAt": 760, "durationMs": 4200,
+    "bands": [[580,"Poor"],[670,"Fair"],[740,"Good"],[851,"Excellent"]] },
+  "grass": { "bladesDesktop": 42000, "bladesMobile": 9000, "cursorRadius": 2.6 },
+  "chat": { "label": "Ask Maxine", "href": "https://scoresos.com/maxine" }
+}

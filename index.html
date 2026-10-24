@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scores OS — interactive hero proof (not live)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="proofbar">INTERACTIVE PROOF — preview, not live · theme from <code id="cfgname">config.json</code></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#"><img id="logo" src="logo.png" alt="" width="40" height="40"><span id="brandname">Score OS</span></a>
+  <a class="btn gold sm" data-href="ctaPrimaryHref" href="#">Get Started</a>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="copy">
+      <p class="eyebrow" data-copy="eyebrow"></p>
+      <h1><span data-copy="h1a"></span> <span class="hl" data-copy="h1b"></span> <span data-copy="h1c"></span></h1>
+      <p class="sub" data-copy="sub"></p>
+      <div class="ctas">
+        <a class="btn gold" data-href="ctaPrimaryHref" data-copy="ctaPrimary" href="#"></a>
+        <a class="btn ghost" data-href="ctaSecondaryHref" data-copy="ctaSecondary" href="#"></a>
+      </div>
+      <p class="hint"><button id="replay" class="link" type="button">↻ Replay the climb</button> <span class="dot">·</span> <span class="hint-t">Move your cursor through the grass</span></p>
+    </div>
+    <div class="media score-slot" id="slot" role="img" aria-label="Illustrative credit score climbing to 784">
+      <div class="score-inner">
+        <div class="num" id="num">520</div>
+        <div class="lbl">Credit score</div>
+        <div class="band" id="band">Poor</div>
+        <div class="unlock" id="unlock"><span class="chk">✓ <span data-copy="unlock"></span></span><span class="tag" data-copy="unlockTag"></span></div>
+      </div>
+    </div>
+  </div>
+  <a class="launcher" id="launcher" data-href="chatHref" href="#"><img src="logo.png" alt=""><span id="chatlabel">Ask Maxine</span></a>
+</section>
+
+<section class="notes">
+  <h2>How this proof works</h2>
+  <ul>
+    <li><b>One fixed WebGL canvas</b> sits behind real HTML, the same approach Lusion uses. Text stays crawlable and selectable.</li>
+    <li><b>The grass is one GPU-instanced draw call</b>, with each blade bent in the vertex shader by wind and by your cursor. Its height follows the score.</li>
+    <li><b>The score ring is a shader plane</b> lined up every frame with the HTML box around the number (DOM↔WebGL sync).</li>
+    <li><b>Theme comes from <code>config.json</code></b>: colors, logo, copy, score range and blade counts. Swap the file to get a different client.</li>
+    <li><b>Mobile</b> uses fewer blades and a pixel-ratio cap. <b>Reduced motion</b> shows one still frame at the final score. <b>No WebGL</b> falls back to a CSS ring.</li>
+  </ul>
+  <p class="disc" data-copy="disclaimer"></p>
+</section>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>

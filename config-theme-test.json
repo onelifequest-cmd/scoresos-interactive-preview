@@ -1,0 +1,62 @@
+{
+  "client": "Demo Funding Co (theme test)",
+  "motif": "score-grass",
+  "logo": "logo.png",
+  "colors": {
+    "deep": "#101A33",
+    "primary": "#2B4C9B",
+    "gold": "#E0B24A",
+    "goldLight": "#FFD98A",
+    "mint": "#EEF2FB",
+    "low": "#E5484D",
+    "mid": "#F5A524"
+  },
+  "font": "Inter",
+  "copy": {
+    "eyebrow": "Business funding readiness",
+    "h1a": "Get your business",
+    "h1b": "funding-ready",
+    "h1c": "faster.",
+    "sub": "Theme-test config: same component kit, different client colors and copy. Funding subject to lender approval.",
+    "ctaPrimary": "Check my readiness",
+    "ctaPrimaryHref": "https://checkout.square.site/merchant/MLGEBVXJC0JRS/checkout/6A2Q2LWRQHPQDXV3LPI3BSBZ",
+    "ctaSecondary": "Talk to us",
+    "ctaSecondaryHref": "https://scoresos.com/maxine",
+    "unlock": "Funding ready",
+    "unlockTag": "Funding OS \u00b7 Coming soon",
+    "disclaimer": "Illustrative score. Results vary; no score increase is guaranteed."
+  },
+  "score": {
+    "from": 520,
+    "to": 784,
+    "unlockAt": 760,
+    "durationMs": 4200,
+    "bands": [
+      [
+        580,
+        "Poor"
+      ],
+      [
+        670,
+        "Fair"
+      ],
+      [
+        740,
+        "Good"
+      ],
+      [
+        851,
+        "Excellent"
+      ]
+    ]
+  },
+  "grass": {
+    "bladesDesktop": 42000,
+    "bladesMobile": 9000,
+    "cursorRadius": 2.6
+  },
+  "chat": {
+    "label": "Ask Maxine",
+    "href": "https://scoresos.com/maxine"
+  }
+}
