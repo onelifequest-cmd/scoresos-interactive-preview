@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Scores OS — interactive hero proof (not live)</title>
+<title>Scores OS — interactive preview (not live)</title>
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="logo.png">
+<link rel="preload" href="fonts/Inter-sub.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="modulepreload" href="vendor/three.module.min.js">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,9 +31,9 @@
         <a class="btn gold" data-href="ctaPrimaryHref" data-copy="ctaPrimary" href="#"></a>
         <a class="btn ghost" data-href="ctaSecondaryHref" data-copy="ctaSecondary" href="#"></a>
       </div>
-      <p class="hint"><button id="replay" class="link" type="button">↻ Replay the climb</button> <span class="dot">·</span> <span class="hint-t">Move your cursor through the grass</span></p>
+      <p class="hint"><button id="replay" class="link" type="button">↻ Replay</button> <span class="dot">·</span> <span class="hint-t" id="hintt">Swipe the negative items away</span></p>
     </div>
-    <div class="media score-slot" id="slot" role="img" aria-label="Illustrative credit score climbing to 784">
+    <div class="media score-slot" id="slot" role="img" aria-label="Illustrative credit score">
       <div class="score-inner">
         <div class="num" id="num">520</div>
         <div class="lbl">Credit score</div>
@@ -38,22 +41,62 @@
         <div class="unlock" id="unlock"><span class="chk">✓ <span data-copy="unlock"></span></span><span class="tag" data-copy="unlockTag"></span></div>
       </div>
     </div>
+    <div class="tilerow">
+      <div class="media tilezone" id="tilezone">
+        <div class="tilechips" id="tilechips" aria-label="Negative items (illustrative). Activate one to dispute it."></div>
+      </div>
+      <p class="tilenote" id="tilenote">Illustrative. Results vary; no removal is guaranteed.</p>
+    </div>
   </div>
-  <a class="launcher" id="launcher" data-href="chatHref" href="#"><img src="logo.png" alt=""><span id="chatlabel">Ask Maxine</span></a>
+  <div class="orb-dock-m"><button class="orb inflow" type="button" data-orb aria-haspopup="dialog"><span class="orb-glow"></span><img src="maxine.webp" alt="" width="52" height="52"><span class="orb-l" data-chatlabel>Ask Maxine</span></button></div>
+</section>
+
+<section class="story" id="story" aria-label="From repair to funding">
+  <div class="pin" id="pin">
+    <div class="story-grid">
+      <div class="svis" id="svis">
+        <div class="gaugewrap" id="gaugewrap">
+          <div class="media gauge" id="gauge" role="img" aria-label="Illustrative average score">
+            <div class="gin"><div class="gnum" id="gnum">540</div><div class="lbl">Avg. of 3 bureaus</div></div>
+          </div>
+          <div class="bureaus" id="bureaus"></div>
+        </div>
+        <div class="media doorslot" id="doorslot" role="img" aria-label="Glowing door labelled Funding OS, coming soon"><div class="cssdoor"><span></span></div></div>
+      </div>
+      <div class="stext" id="stext"></div>
+    </div>
+    <div class="sprog" id="sprog" aria-hidden="true"></div>
+  </div>
 </section>
 
 <section class="notes">
-  <h2>How this proof works</h2>
+  <h2>How this preview works</h2>
   <ul>
-    <li><b>One fixed WebGL canvas</b> sits behind real HTML, the same approach Lusion uses. Text stays crawlable and selectable.</li>
-    <li><b>The grass is one GPU-instanced draw call</b>, with each blade bent in the vertex shader by wind and by your cursor. Its height follows the score.</li>
-    <li><b>The score ring is a shader plane</b> lined up every frame with the HTML box around the number (DOM↔WebGL sync).</li>
-    <li><b>Theme comes from <code>config.json</code></b>: colors, logo, copy, score range and blade counts. Swap the file to get a different client.</li>
-    <li><b>Mobile</b> uses fewer blades and a pixel-ratio cap. <b>Reduced motion</b> shows one still frame at the final score. <b>No WebGL</b> falls back to a CSS ring.</li>
+    <li><b>One fixed WebGL canvas</b> sits behind real HTML. Text stays crawlable and selectable.</li>
+    <li><b>Grass</b> is one GPU-instanced draw call; it bends toward your cursor and grows with the score.</li>
+    <li><b>Negative-item tiles</b> use simple hand-written physics. Each one you knock away ticks the illustrative score up. Keyboard users can tab to each item.</li>
+    <li><b>The repair-to-fund story</b> is scrubbed by scroll (GSAP ScrollTrigger + Lenis) and runs backwards when you scroll up.</li>
+    <li><b>Maxine</b> answers from a fixed knowledge base in this preview. There is no live AI behind it.</li>
+    <li><b>Theme comes from <code>config.json</code></b>: colors, logo, copy, tiles, story and Maxine's answers. Swap the file to get a different client.</li>
+    <li><b>Mobile</b> uses fewer blades and tiles and a pixel-ratio cap. <b>Reduced motion</b> shows still frames. <b>No WebGL</b> falls back to CSS.</li>
   </ul>
   <p class="disc" data-copy="disclaimer"></p>
+  <div class="orb-dock-m end"><button class="orb inflow" type="button" data-orb aria-haspopup="dialog"><span class="orb-glow"></span><img src="maxine.webp" alt="" width="52" height="52"><span class="orb-l" data-chatlabel>Ask Maxine</span></button></div>
 </section>
 </main>
+
+<button class="orb float" id="orb" type="button" data-orb aria-haspopup="dialog" aria-label="Ask Maxine"><span class="orb-glow"></span><img src="maxine.webp" alt="" width="64" height="64"></button>
+
+<div class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-h" hidden>
+  <div class="chat-h"><img src="maxine.webp" alt="" width="36" height="36"><div><b id="chat-h">Maxine</b><small id="chat-sub">Preview: canned answers, no live AI</small></div><button class="x" id="chat-x" type="button" aria-label="Close chat">✕</button></div>
+  <div class="chat-log" id="chat-log" aria-live="polite"></div>
+  <div class="chat-q" id="chat-q"></div>
+  <form class="chat-in" id="chat-form"><input id="chat-input" type="text" autocomplete="off" placeholder="Ask about pricing, Maxine, Funding OS…" aria-label="Your question"><button type="submit" class="btn gold sm">Ask</button></form>
+  <div class="chat-cta" id="chat-cta"></div>
+  <p class="chat-f" id="chat-f"></p>
+</div>
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
 <script type="module" src="main.js"></script>
 </body>
 </html>

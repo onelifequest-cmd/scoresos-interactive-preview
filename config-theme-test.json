@@ -23,7 +23,7 @@
     "ctaSecondary": "Talk to us",
     "ctaSecondaryHref": "https://scoresos.com/maxine",
     "unlock": "Funding ready",
-    "unlockTag": "Funding OS \u00b7 Coming soon",
+    "unlockTag": "Funding OS · Coming soon",
     "disclaimer": "Illustrative score. Results vary; no score increase is guaranteed."
   },
   "score": {
@@ -48,7 +48,8 @@
         851,
         "Excellent"
       ]
-    ]
+    ],
+    "start": 650
   },
   "grass": {
     "bladesDesktop": 42000,
@@ -56,7 +57,90 @@
     "cursorRadius": 2.6
   },
   "chat": {
-    "label": "Ask Maxine",
-    "href": "https://scoresos.com/maxine"
+    "label": "Ask Ava",
+    "href": "https://scoresos.com/maxine",
+    "avatar": "logo.png",
+    "name": "Ava",
+    "sub": "Theme test: canned answers",
+    "intro": "Hi, I'm Ava (theme test).",
+    "fallback": "A team member can follow up.",
+    "footer": "Don't share sensitive numbers in chat.",
+    "kb": [
+      {
+        "q": "What is this?",
+        "k": [
+          "what"
+        ],
+        "a": "A theme-test client using the same kit."
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Request a Callback",
+        "href": "https://scoresos.com/maxine",
+        "style": "gold"
+      }
+    ]
+  },
+  "tiles": {
+    "labels": [
+      "Thin file",
+      "High utilization",
+      "Late payment",
+      "Hard inquiry",
+      "No business credit",
+      "Collection",
+      "Missing EIN",
+      "Outdated address"
+    ],
+    "mobileCount": 6,
+    "hint": "Swipe the blockers away",
+    "hintTouch": "Tap or swipe the blockers away",
+    "note": "Illustrative. Results vary; nothing here is guaranteed.",
+    "a11yPrefix": "Fix"
+  },
+  "story": {
+    "bureaus": [
+      [
+        "Equifax",
+        590,
+        742
+      ],
+      [
+        "Experian",
+        604,
+        755
+      ],
+      [
+        "TransUnion",
+        597,
+        748
+      ]
+    ],
+    "stages": [
+      {
+        "eyebrow": "01 · Prep",
+        "h": "Clean up the file.",
+        "p": "Theme test: stages, numbers and copy all come from config."
+      },
+      {
+        "eyebrow": "02 · Track",
+        "h": "Watch readiness climb.",
+        "p": "Numbers are illustrative."
+      },
+      {
+        "eyebrow": "03 · Apply",
+        "h": "Pick the funding goal.",
+        "p": "Business line, equipment or SBA-style options."
+      },
+      {
+        "eyebrow": "04 · Funding",
+        "tag": "Coming soon",
+        "h": "See what you may qualify for.",
+        "p": "Subject to lender approval. Not an offer of credit."
+      }
+    ],
+    "doorLabel": "Funding",
+    "doorTag": "Coming soon"
   }
 }

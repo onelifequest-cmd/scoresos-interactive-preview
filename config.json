@@ -26,8 +26,216 @@
     "unlockTag": "Funding OS · Coming soon",
     "disclaimer": "Illustrative score. Results vary; no score increase is guaranteed."
   },
-  "score": { "from": 520, "to": 784, "unlockAt": 760, "durationMs": 4200,
-    "bands": [[580,"Poor"],[670,"Fair"],[740,"Good"],[851,"Excellent"]] },
-  "grass": { "bladesDesktop": 42000, "bladesMobile": 9000, "cursorRadius": 2.6 },
-  "chat": { "label": "Ask Maxine", "href": "https://scoresos.com/maxine" }
+  "score": {
+    "from": 520,
+    "to": 784,
+    "unlockAt": 760,
+    "durationMs": 4200,
+    "bands": [
+      [
+        580,
+        "Poor"
+      ],
+      [
+        670,
+        "Fair"
+      ],
+      [
+        740,
+        "Good"
+      ],
+      [
+        851,
+        "Excellent"
+      ]
+    ],
+    "start": 640
+  },
+  "grass": {
+    "bladesDesktop": 42000,
+    "bladesMobile": 9000,
+    "cursorRadius": 2.6
+  },
+  "chat": {
+    "label": "Ask Maxine",
+    "href": "https://scoresos.com/maxine",
+    "avatar": "maxine.webp",
+    "name": "Maxine",
+    "sub": "Preview: canned answers, no live AI",
+    "intro": "Hi! I'm Maxine. Ask me about Score OS, pricing, or what's coming soon.",
+    "fallback": "I don't have that one in this preview. Tap Request a Callback and a team member will follow up.",
+    "footer": "Please don't share an SSN, date of birth, credit logins or card numbers in chat.",
+    "kb": [
+      {
+        "q": "What is Score OS?",
+        "k": [
+          "what is",
+          "score os",
+          "scores os",
+          "platform",
+          "crm",
+          "about"
+        ],
+        "a": "An all-in-one operating system for credit repair agencies: CRM, AI-drafted dispute letters, 3-bureau tracking, a white-label client portal, messaging, billing and monthly progress updates. It includes a Marketing OS account."
+      },
+      {
+        "q": "How much does it cost?",
+        "k": [
+          "cost",
+          "price",
+          "pricing",
+          "how much",
+          "199",
+          "49",
+          "plan",
+          "fee"
+        ],
+        "a": "Agency OS is $199/mo with unlimited active clients and no per-client fees; cancel anytime. DIY OS for individuals is $49.99/mo."
+      },
+      {
+        "q": "What is Marketing OS?",
+        "k": [
+          "marketing",
+          "highlevel",
+          "ghl",
+          "funnel",
+          "automation"
+        ],
+        "a": "A white-label HighLevel sub-account (app.scoresos.com) included with your subscription, for funnels, conversations, calendars and automations. Phone, texting and AI usage are billed to you, and texting needs your own A2P registration."
+      },
+      {
+        "q": "Do clients see my brand?",
+        "k": [
+          "brand",
+          "white",
+          "label",
+          "logo",
+          "portal"
+        ],
+        "a": "Yes, yours. The client portal is white-labeled with your logo, colors and agency name."
+      },
+      {
+        "q": "What is Maxine?",
+        "k": [
+          "maxine",
+          "ai",
+          "letter",
+          "dispute"
+        ],
+        "a": "I'm Score OS's AI. I help draft a unique dispute letter for each item and answer questions on the site and in the app. You review every letter before it's sent."
+      },
+      {
+        "q": "Do you guarantee results?",
+        "k": [
+          "guarantee",
+          "promise",
+          "results",
+          "delete",
+          "removal",
+          "increase"
+        ],
+        "a": "No. No one can legally guarantee credit repair results. Score OS gives you the tools to dispute inaccurate, unverifiable or outdated items and track every round."
+      },
+      {
+        "q": "Is Funding OS available?",
+        "k": [
+          "funding",
+          "loan",
+          "qualify",
+          "mortgage",
+          "approved"
+        ],
+        "a": "Funding OS is coming soon. It's planned to check funding readiness and show goals a client may qualify for. It won't promise approvals."
+      },
+      {
+        "q": "Can I add staff or an outsourcer?",
+        "k": [
+          "staff",
+          "team",
+          "outsourc"
+        ],
+        "a": "Yes. You can add staff and link an outsourcer to your agency with in-app messaging."
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Request a Callback",
+        "href": "https://scoresos.com/maxine",
+        "style": "ghost"
+      },
+      {
+        "label": "Get Started $199",
+        "href": "https://checkout.square.site/merchant/MLGEBVXJC0JRS/checkout/6A2Q2LWRQHPQDXV3LPI3BSBZ",
+        "style": "gold"
+      },
+      {
+        "label": "DIY $49.99",
+        "href": "https://checkout.square.site/merchant/MLGEBVXJC0JRS/checkout/VROSXIVQX2GK6ISB4BMCE237",
+        "style": "ghost"
+      }
+    ]
+  },
+  "tiles": {
+    "labels": [
+      "Late payment",
+      "Collection",
+      "Charge-off",
+      "Hard inquiry",
+      "Medical collection",
+      "Duplicate account",
+      "Past due",
+      "Outdated item",
+      "Repossession",
+      "Unverified debt"
+    ],
+    "mobileCount": 6,
+    "hint": "Swipe the negative items away",
+    "hintTouch": "Tap or swipe the negative items away",
+    "note": "Illustrative. Results vary; no removal is guaranteed.",
+    "a11yPrefix": "Dispute"
+  },
+  "story": {
+    "bureaus": [
+      [
+        "Equifax",
+        512,
+        768
+      ],
+      [
+        "Experian",
+        538,
+        781
+      ],
+      [
+        "TransUnion",
+        527,
+        774
+      ]
+    ],
+    "stages": [
+      {
+        "eyebrow": "01 · Repair",
+        "h": "Dispute what's inaccurate.",
+        "p": "Maxine drafts a unique letter for each item. You review every one before it goes out."
+      },
+      {
+        "eyebrow": "02 · Track",
+        "h": "Watch all three bureaus on one scoreboard.",
+        "p": "Equifax, Experian and TransUnion side by side, for you and your client. Numbers here are illustrative."
+      },
+      {
+        "eyebrow": "03 · Fund",
+        "h": "Then point clients toward their goal.",
+        "p": "Business funding, personal, auto, mortgage or rental: the goal they picked at onboarding."
+      },
+      {
+        "eyebrow": "04 · Funding OS",
+        "tag": "Coming soon",
+        "h": "Repaired credit, ready for funding.",
+        "p": "Funding OS will check readiness and show which goals a client may qualify for. Not an offer of credit; no approval is guaranteed."
+      }
+    ],
+    "doorLabel": "Funding OS",
+    "doorTag": "Coming soon"
+  }
 }
